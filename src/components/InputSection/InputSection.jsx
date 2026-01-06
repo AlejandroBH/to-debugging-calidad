@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUnlock } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   flex: 1;
@@ -123,6 +124,15 @@ const InputSection = ({ text, setText, secretKey, setKey, onEncrypt, onDecrypt }
       </Controls>
     </Container>
   );
+};
+
+InputSection.propTypes = {
+  text: PropTypes.string.isRequired,
+  setText: PropTypes.func.isRequired,
+  secretKey: PropTypes.string.isRequired,
+  setKey: PropTypes.func.isRequired,
+  onEncrypt: PropTypes.func.isRequired,
+  onDecrypt: PropTypes.func.isRequired,
 };
 
 export default InputSection;

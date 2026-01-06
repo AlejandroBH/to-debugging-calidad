@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faCheck, faLock } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   flex: 0 0 400px;
@@ -94,6 +95,10 @@ const OutputSection = ({ outputText }) => {
       )}
     </Container>
   );
+};
+
+OutputSection.propTypes = {
+  outputText: PropTypes.string.isRequired,
 };
 
 export default OutputSection;
