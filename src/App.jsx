@@ -13,19 +13,11 @@ function App() {
   const [secretKey, setSecretKey] = useState('');
 
   const handleEncrypt = () => {
-    if (!secretKey) {
-      alert('Por favor ingrese una llave secreta');
-      return;
-    }
     const encrypted = encryptText(inputText, secretKey);
     setOutputText(encrypted);
   };
 
   const handleDecrypt = () => {
-    if (!secretKey) {
-      alert('Por favor ingrese una llave secreta');
-      return;
-    }
     const decrypted = decryptText(inputText, secretKey);
 
     if (!decrypted) {
